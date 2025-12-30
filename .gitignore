@@ -1,0 +1,43 @@
+# --- OS & Disk Junk ---
+.DS_Store
+Thumbs.db
+.directory
+*~
+*.swp
+*.swo
+
+# --- Python / Neovim Plugins ---
+__pycache__/
+*.py[cod]
+node_modules/
+
+# --- Shell History (NEVER commit these) ---
+# Just in case you accidentally stow a folder containing them
+.bash_history
+.zsh_history
+.lesshst
+.wget-hsts
+
+# --- Security / Sensitive Data ---
+# Exclude SSH keys if you stow your .ssh folder
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+known_hosts
+
+# GPG & Keys
+secring.gpg
+pubring.gpg
+*.pfx
+*.p12
+*.pem
+
+# Environment variables containing secrets
+.env
+.env.local
+
+# --- Pacman / Arch Linux ---
+# If you are stowing system files or managing configs that pacman updates
+*.pacnew
+*.pacsave
