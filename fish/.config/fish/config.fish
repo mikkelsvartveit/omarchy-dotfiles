@@ -30,3 +30,14 @@ abbr prc "gh pr create --web"
 
 # Initialize zoxide
 zoxide init fish --cmd j | source
+
+# pnpm
+set -gx PNPM_HOME "/home/mikkel/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
