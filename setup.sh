@@ -9,5 +9,19 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 omf install https://github.com/jhillyerd/plugin-git
 chsh -s /usr/bin/fish
 
-# Zoxide (autojump)
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+# Apps
+yay -S zen-browser-bin ticktick
+
+# Install pnpm and Node
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+pnpm env use --global lts
+
+# Install Bun
+curl -fsSL https://bun.com/install | bash
+
+# Install pyenv and Python
+pyenv install 3.11
+pyenv global 3.11
+
+# Install Go
+sudo pacman -S go
