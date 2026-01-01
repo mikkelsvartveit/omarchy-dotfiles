@@ -21,9 +21,10 @@ pnpm env use --global lts
 # Install Bun
 curl -fsSL https://bun.com/install | bash
 
-# Install uv and Python
+# Install uv, Python, and Poetry
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv python install --default
+curl -sSL https://install.python-poetry.org | python3 -
 
 # Install Go
 sudo pacman -S go
