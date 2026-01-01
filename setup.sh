@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo pacman -S stow
 
 # Key remapping
@@ -25,3 +26,8 @@ pyenv global 3.11
 
 # Install Go
 sudo pacman -S go
+
+# Remap CapsLock to Ctrl and Esc
+sudo ln -sf ~/.config/keyd/default.conf /etc/keyd/default.conf
+sudo systemctl enable --now keyd
+sudo keyd reload
