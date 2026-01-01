@@ -20,9 +20,9 @@ pnpm env use --global lts
 # Install Bun
 curl -fsSL https://bun.com/install | bash
 
-# Install pyenv and Python
-pyenv install 3.11
-pyenv global 3.11
+# Install uv and Python
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv python install --default
 
 # Install Go
 sudo pacman -S go
