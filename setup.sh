@@ -8,6 +8,9 @@ sudo pacman -S --noconfirm --needed stow
 stow --adopt contents/
 git stash -u
 
+# Set Omarchy theme
+omarchy-theme-set 01-light
+
 # Install wtype for special characters remappings
 sudo pacman -S --noconfirm --needed wtype
 
