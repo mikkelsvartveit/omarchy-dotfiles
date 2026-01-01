@@ -1,10 +1,14 @@
 #!/bin/bash
-sudo pacman -S stow
 
-# Key remapping
+# Install stow and set up dotfiles
+sudo pacman -S stow
+stow --adopt contents/
+git stash -u
+
+# Install wtype for special characters remappings
 sudo pacman -S wtype
 
-# Fish shell
+# Install fish shell
 sudo pacman -S fish
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 omf install https://github.com/jhillyerd/plugin-git
