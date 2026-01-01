@@ -10,9 +10,6 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 omf install https://github.com/jhillyerd/plugin-git
 chsh -s /usr/bin/fish
 
-# Apps
-yay -S zen-browser-bin ticktick
-
 # Install pnpm and Node
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 pnpm env use --global lts
@@ -31,3 +28,12 @@ sudo pacman -S go
 sudo ln -sf ~/.config/keyd/default.conf /etc/keyd/default.conf
 sudo systemctl enable --now keyd
 sudo keyd reload
+
+# Install GUI apps
+yay -S zen-browser-bin 
+yay -S ticktick
+
+# Fix 1Password for Zen
+sudo mkdir /etc/1password
+sudo touch /etc/1password/custom_allowed_browsers
+echo "zen-bin" | sudo tee -a /etc/1password/custom_allowed_browsers
