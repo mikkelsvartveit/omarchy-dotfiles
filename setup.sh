@@ -35,6 +35,9 @@ sudo systemctl enable --now keyd
 sudo keyd reload
 
 # Install GUI apps
+sudo pacman -S gnome-calendar
+sudo pacman -S geary
+yay -S gnome-online-accounts-gtk
 yay -S zen-browser-bin 
 yay -S ticktick
 
@@ -42,3 +45,7 @@ yay -S ticktick
 sudo mkdir /etc/1password
 sudo touch /etc/1password/custom_allowed_browsers
 echo "zen-bin" | sudo tee -a /etc/1password/custom_allowed_browsers
+
+# Use media keys as default for Apple keyboards
+echo "options hid_apple fnmode=1" | sudo tee /etc/modprobe.d/hid_apple.conf
+sudo mkinitcpio -P
