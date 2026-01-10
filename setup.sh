@@ -42,6 +42,9 @@ sudo ln -sf ~/.config/keyd/default.conf /etc/keyd/default.conf
 sudo systemctl enable --now keyd
 sudo keyd reload
 
+# Raycast-like launcher
+yay -S --noconfirm --answerdiff None vicinae-bin
+
 # Install GUI apps
 sudo pacman -S --noconfirm --needed gnome-calendar
 sudo pacman -S --noconfirm --needed geary
