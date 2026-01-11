@@ -6,6 +6,7 @@ set -x EDITOR "nvim"
 
 alias fishconfig="cd ~/.config/fish && nvim config.fish && cd -"
 alias nvimconfig="cd ~/.config/nvim && nvim && cd -"
+alias omarchyconfig="cd ~/.local/share/omarchy/default/ && nvim && cd -"
 
 abbr v "nvim"
 abbr c "claude"
